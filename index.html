@@ -68,8 +68,8 @@
                             data-bs-toggle="modal" data-bs-target="#inscription">S'inscrire</a>
                     </li>
                     <li class="nav-item ms-2 d-none d-md-inline ">
-                        <a href="#login" class="btn btn-danger rounded rounded-pill" style="width: 100;"
-                            data-bs-toggle="modal" data-bs-target="#login">S'identifier</a>
+                        <a href="#login" class="btn text-danger " style="width: 100;" data-bs-toggle="modal"
+                            data-bs-target="#login">S'identifier</a>
                     </li>
                 </div>
             </div>
@@ -78,7 +78,7 @@
 
 
         <!-- modal itself -->
-        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal fade " id="login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -113,26 +113,26 @@
                         <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                     </div>
                     <div class="modal-body">
-                        <form >
+                        <form>
                             <label for="fname" class="form-label">Votre Prénom:</label>
-                        <input type="text" class="form-control" id="fname" placeholder="e.g. Hajar" required>
+                            <input type="text" class="form-control" id="fname" placeholder="e.g. Hajar" required>
 
-                        <label for="lname" class="form-label">Votre Nom:</label>
-                        <input type="text" class="form-control" id="lname" placeholder="e.g. Akarouch" required>
+                            <label for="lname" class="form-label">Votre Nom:</label>
+                            <input type="text" class="form-control" id="lname" placeholder="e.g. Akarouch" required>
 
 
-                        <label for="eemail" class="form-label">Votre adresse email:</label>
-                        <input type="email" class="form-control" id="eemail"
-                            placeholder="e.g. hajar.akarouch@example.com" required>
+                            <label for="eemail" class="form-label">Votre adresse email:</label>
+                            <input type="email" class="form-control" id="eemail"
+                                placeholder="e.g. hajar.akarouch@example.com" required>
 
-                        <label for="pwd" class="form-label">Votre mot de passe:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="************" required>
+                            <label for="pwd" class="form-label">Votre mot de passe:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="************" required>
 
-                        <label for="pwd1" class="form-label">Répétez votre mot de passe:</label>
-                        <input type="password" class="form-control" id="pwd1" placeholder="************" required>
+                            <label for="pwd1" class="form-label">Répétez votre mot de passe:</label>
+                            <input type="password" class="form-control" id="pwd1" placeholder="************" required>
 
                         </form>
-                        
+
 
                     </div>
                     <div class="modal-footer justify-content-center">
@@ -148,7 +148,7 @@
 
 
         <!-- main image & intro text -->
-        <section id="intro" class="bg-light d-none d-md-block ">
+        <section id="intro" class="bg-light d-none d-md-block mb-5 ">
             <div class="container-lg">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-5 text-center text-md-start">
@@ -166,97 +166,118 @@
                     </div>
 
                     <div class="col-md-5 text-center d-none d-md-block">
-                        <!-- <img class="scale-img img-fluid " src="/assets/saladeTransparent.png" alt="Salade"> -->
-                        <img class=" img-fluid " src="/assets/saladeTransparent.png" alt="Salade">
+                        <img class="scale-img img-fluid d-none d-md-inline" src="/assets/saladeTransparent.png"
+                            alt="Salade">
+                        <!-- <img class=" img-fluid " src="/assets/saladeTransparent.png" alt="Salade"> -->
                     </div>
                 </div>
             </div>
         </section>
+
     </div>
 
 
 
 
 
-    <section class="topRestaurants bg-warning d-none d-md-block">
-        <div class="row justify-content-center my-2 g-0 ">
+    <section class="topRestaurants bg-success d-none d-md-block mt-5">
+        <div class="row  my-2 g-0 ">
+            <h2 class="text-light container container-md title">Les mieux notés réstaurants </h2>
 
-            <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
+            <div class="row d-flex justify-content-between ">
+                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
+                    <img src="/assets/restau.jpg" class="card-img-top dimensions" alt="...">
 
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
+                    <div class="card-body">
+                        <div class="pb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
 
+                        </div>
+                        <h3 class="card-title">Let's Be Healing Food</h3>
+                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
+                        <a href="#" class="btn btn-none  text-warning border-2 border-warning rounded rounded-pill "
+                            style="width: 15rem;">Voir le réstaurant</a>
                     </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none  text-warning border-2 border-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
+                </div>
+                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
+                    <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
+
+                    <div class="card-body">
+                        <div class="pb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+
+                        </div>
+                        <h3 class="card-title">Let's Be Healing Food</h3>
+                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
+                        <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
+                            style="width: 15rem;">Voir le réstaurant</a>
+                    </div>
+                </div>
+                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
+                    <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="pb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+
+                        </div>
+                        <h3 class="card-title">Let's Be Healing Food</h3>
+                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
+                        <a href="#" class="btn btn-none text-light border-2 bg-warning rounded rounded-pill "
+                            style="width: 15rem;">Voir le réstaurant</a>
+                    </div>
+                </div>
+                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
+                    <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="pb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+
+                        </div>
+                        <h3 class="card-title">Let's Be Healing Food</h3>
+                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
+                        <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
+                            style="width: 15rem;">Voir le réstaurant</a>
+                    </div>
                 </div>
             </div>
-            <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
 
+
+            <!-- l card jdida -->
+            <div class="card" style="width: 22rem; ">
+                <img src="./assets/healthy.jpg" class="card-img-top" alt="restaurant">
                 <div class="card-body">
-                    <div class="pb-2">
+                    <small class="text-warning ">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
+                    </small>
+                  <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                  <span class="card-text text-muted">
+                    <small><i class="bi bi-geo-alt-fill"></i></small>
+                    <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                  </span>
+                  <a href="#" class=" d-flex justify-content-center btn btn-primary  mt-2 rounded rounded-pill text-light bg-warning border-0" >Voir le réstaurant</a>
                 </div>
-            </div>
-
-            <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-light border-2 bg-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-
-            <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-            <div class="pt-4 justify-content-center">
-                <i class="bi bi-circle"></i>
-                <i class="bi bi-circle"></i>
-            </div>
+              </div>
+            
 
         </div>
 
@@ -264,7 +285,7 @@
 
 
     <section class="topRestaurants bg-light d-none d-md-block">
-        <div class="row justify-content-center my-5 g-0 needs-validation" >
+        <div class="row justify-content-center my-5 g-0 needs-validation">
             <div class="card col-4 border-0 m-5" style="width: 20rem; height: 30rem;">
                 <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
 
