@@ -1,423 +1,403 @@
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasty</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
 
     <link href="./styles/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        crossorigin="anonymous">
     <style>
 
     </style>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" defer
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider-extensions.min.js"
+        crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
-<body class="bg-light">
-
+<body>
     <!-- navbar -->
 
+    <nav>
+        <div class="container-xxl d-flex justify-content-around">
+            <div class="mt-3">
+                <a href="#intro" class="navbar-brand">
+                    <span>
+                        <img src="/assets/svg/TTasty.svg" alt="" style="width: 80;">
+                    </span>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar links -->
+            <div class="navbar navbar-expand-md navbar-light">
+                <div id="main-nav" class="collapse navbar-collapse justify-content-end align-center">
 
+                    <ul class="navbar-nav gap-4">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link ">Accueil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
 
-    <div class="hihi">
-        <nav class="">
-            <div class="container-xxl d-flex justify-content-around">
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#reviews" class="nav-link ">Articles</a>
+                        </li>
 
-                <div class="mt-3">
-                    <a href="#intro" class="navbar-brand">
-                        <span>
-                            <img src="/assets/TTasty.svg" alt="" style="width: 80;">
-                        </span>
-                    </a>
-
-                </div>
-
-
-                <!-- a toggle button for mobile nav  -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- navbar links -->
-                <div class="navbar navbar-expand-md navbar-light">
-                    <div id="main-nav" class="collapse navbar-collapse justify-content-end align-center">
-
-                        <ul class="navbar-nav gap-4">
-                            <li class="nav-item">
-                                <a href="#home" class="nav-link ">Acceuil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#categories" class="nav-link">Catégories</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#reviews" class="nav-link ">Articles</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="mt-3">
-                    <li class="nav-item d-none d-md-inline">
-                        <a href="#signup" class="btn btn-danger rounded rounded-pill" style="width: 100;"
-                            data-bs-toggle="modal" data-bs-target="#inscription">S'inscrire</a>
-                    </li>
-                    <li class="nav-item ms-2 d-none d-md-inline ">
-                        <a href="#login" class="btn text-danger " style="width: 100;" data-bs-toggle="modal"
-                            data-bs-target="#login">S'identifier</a>
-                    </li>
+                    </ul>
                 </div>
             </div>
 
-        </nav>
+            <div class="mt-3">
+                <li class="">
+                    <a id="theme_toggler" href="#" class="btn " style="width: 100;font-size: 26px;">
+                        🔆</a>
+                </li>
+                <li class="nav-item d-none d-md-inline">
+                    <a href="#signup" class="btn btn-danger  " style="width: 100;" data-bs-toggle="modal"
+                        data-bs-target="#inscription">S'inscrire</a>
+                </li>
+                <li class="nav-item ms-2 d-none d-md-inline ">
+                    <a href="/admin/index.html" class="btn text-danger " style="width: 100;">S'identifier</a>
+                </li>
 
-
-        <!-- modal itself -->
-        <div class="modal fade " id="login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header ">
-                        <h5 class="modal-title " id="modal-title">S'identifier</h5>
-                        <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <label for="modal-email" class="form-label">Votre adresse email:</label>
-                        <input type="email" class="form-control" id="modal-email"
-                            placeholder="e.g. hajar.akarouch@example.com">
-
-                        <label for="modal-password" class="form-label">Votre mot de passe:</label>
-                        <input type="password" class="form-control" id="modal-password" placeholder="">
-
-
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <a href="homePage.html" class="btn btn-danger  rounded rounded-pill">S'identifier</a>
-                    </div>
-                </div>
             </div>
-
         </div>
 
+    </nav>
 
-        <!-- modal itself -->
-        <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header ">
-                        <h5 class="modal-title " id="modal-title">S'inscrire</h5>
-                        <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <label for="fname" class="form-label">Votre Prénom:</label>
-                            <input type="text" class="form-control" id="fname" placeholder="e.g. Hajar" required>
+    <!-- modal itself -->
+    <div class="modal fade " id="login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title " id="modal-title">S'identifier</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="modal-email" class="form-label">Votre adresse email:</label>
+                    <input type="email" class="form-control" id="modal-email"
+                        placeholder="e.g. hajar.akarouch@example.com">
 
-                            <label for="lname" class="form-label">Votre Nom:</label>
-                            <input type="text" class="form-control" id="lname" placeholder="e.g. Akarouch" required>
-
-
-                            <label for="eemail" class="form-label">Votre adresse email:</label>
-                            <input type="email" class="form-control" id="eemail"
-                                placeholder="e.g. hajar.akarouch@example.com" required>
-
-                            <label for="pwd" class="form-label">Votre mot de passe:</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="************" required>
-
-                            <label for="pwd1" class="form-label">Répétez votre mot de passe:</label>
-                            <input type="password" class="form-control" id="pwd1" placeholder="************" required>
-
-                        </form>
+                    <label for="modal-password" class="form-label">Votre mot de passe:</label>
+                    <input type="password" class="form-control" id="modal-password" placeholder="">
 
 
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <a href="homePage.html" class="btn btn-danger rounded rounded-pill">S'inscrire</a>
-                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="homePage.html" class="btn btn-danger   ">S'identifier</a>
                 </div>
             </div>
-
         </div>
-
-
-
-
-
-        <!-- main image & intro text -->
-        <section id="intro" class="bg-light d-none d-md-block mb-5 ">
-            <div class="container-lg">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-5 text-center text-md-start">
-                        <h1>
-                            <div class="display-5 text-center ">Découvrez la meilleure nourriture au Maroc</div>
-                        </h1>
-                        <div class="input-group mt-4">
-                            <!-- <span class="input-group-text bg-light">
-                            <i class="bi bi-search"></i>
-                        </span> -->
-                            <input type="search" class="form-control rounded rounded-pill "
-                                placeholder="I'm looking for ..." aria-label="Search" aria-describedby="search-addon" />
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-5 text-center d-none d-md-block">
-                        <img class="scale-img img-fluid d-none d-md-inline" src="/assets/saladeTransparent.png"
-                            alt="Salade">
-                        <!-- <img class=" img-fluid " src="/assets/saladeTransparent.png" alt="Salade"> -->
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </div>
 
 
-
-
-
-    <section class="topRestaurants bg-success d-none d-md-block mt-5">
-        <div class="row  my-2 g-0 ">
-            <h2 class="text-light container container-md title">Les mieux notés réstaurants </h2>
-
-            <div class="row d-flex justify-content-between ">
-                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                    <img src="/assets/restau.jpg" class="card-img-top dimensions" alt="...">
-
-                    <div class="card-body">
-                        <div class="pb-2">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-
-                        </div>
-                        <h3 class="card-title">Let's Be Healing Food</h3>
-                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                        <a href="#" class="btn btn-none  text-warning border-2 border-warning rounded rounded-pill "
-                            style="width: 15rem;">Voir le réstaurant</a>
-                    </div>
+    <!-- modal itself -->
+    <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title " id="modal-title">S'inscrire</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
-                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                    <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
+                <div class="modal-body">
+                    <form>
+                        <label for="fname" class="form-label">Votre Prénom:</label>
+                        <input type="text" class="form-control" id="fname" placeholder="e.g. Hajar" required>
 
-                    <div class="card-body">
-                        <div class="pb-2">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
+                        <label for="lname" class="form-label">Votre Nom:</label>
+                        <input type="text" class="form-control" id="lname" placeholder="e.g. Akarouch" required>
 
-                        </div>
-                        <h3 class="card-title">Let's Be Healing Food</h3>
-                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                        <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                            style="width: 15rem;">Voir le réstaurant</a>
-                    </div>
+
+                        <label for="eemail" class="form-label">Votre adresse email:</label>
+                        <input type="email" class="form-control" id="eemail"
+                            placeholder="e.g. hajar.akarouch@example.com" required>
+
+                        <label for="pwd" class="form-label">Votre mot de passe:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="************" required>
+
+                        <label for="pwd1" class="form-label">Répétez votre mot de passe:</label>
+                        <input type="password" class="form-control" id="pwd1" placeholder="************" required>
+
+                    </form>
+
+
                 </div>
-                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                    <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="pb-2">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-
-                        </div>
-                        <h3 class="card-title">Let's Be Healing Food</h3>
-                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                        <a href="#" class="btn btn-none text-light border-2 bg-warning rounded rounded-pill "
-                            style="width: 15rem;">Voir le réstaurant</a>
-                    </div>
-                </div>
-                <div class="card col-3 border-0 m-2" style="width: 20rem; height: 30rem;">
-                    <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="pb-2">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-
-                        </div>
-                        <h3 class="card-title">Let's Be Healing Food</h3>
-                        <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                        <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                            style="width: 15rem;">Voir le réstaurant</a>
-                    </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="homePage.html" class="btn btn-danger  ">S'inscrire</a>
                 </div>
             </div>
+        </div>
 
+    </div>
+
+
+    <!-- main image & intro text -->
+    <section id="intro" class=" d-none d-md-block ">
+        <div class="mint_1"></div>
+        <div class="mint_2"></div>
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <div class="welcome-area" id="welcome"
+                        style="display: flex;justify-content: center;align-items: center;">
+                        <div class="header-text">
+                            <div class="container">
+                                <h1>Découvrez la meilleure <em>nourriture</em> au Maroc</h1>
+                                <div class="input-group" id="search_input">
+                                    <select class="countries" name="countries">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                    <input type="text" class="form-control "
+                                        placeholder="Search For Restaurants, Hotels, Meals ..">
+                                    <button type="submit" class="input-group-text btn-danger"><i
+                                            class="bi bi-search me-2"></i> Search</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ***** Header Text End ***** -->
+                    </div>
+                    <!-- ***** Welcome Area End ***** -->
+
+                </div>
+
+                <div class="col-md-5 text-center d-none d-md-block">
+                    <img id="hero-image" class="scale-img img-fluid d-none d-md-inline "
+                        src="/assets/saladeTransparent.png" alt="Salade">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" bg-warning " style="height:80vh ;">
+        <div class="row ">
 
             <!-- l card jdida -->
-            <div class="card" style="width: 22rem; ">
-                <img src="./assets/healthy.jpg" class="card-img-top" alt="restaurant">
-                <div class="card-body">
-                    <small class="text-warning ">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </small>
-                  <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
-                  <span class="card-text text-muted">
-                    <small><i class="bi bi-geo-alt-fill"></i></small>
-                    <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
-                  </span>
-                  <a href="#" class=" d-flex justify-content-center btn btn-primary  mt-2 rounded rounded-pill text-light bg-warning border-0" >Voir le réstaurant</a>
+            <div style="margin: 0;">
+                <h2 class="text-light title mt-5">LES MIEUX NOTÉS RÉSTAURANTS</h2>
+                <div
+                    class="mt-5 swiffy-slider slider-item-show5 slider-item-reveal slider-item-ratio slider-item-ratio-1x1 slider-item-snapstart slider-nav-square slider-nav-dark slider-nav-sm  slider-nav-visible slider-nav-touch  slider-nav-autopause  slider-indicators-light  slider-indicators-highlight slider-indicators-sm slider-nav-animation slider-nav-animation-appear slider-nav-animation-normal  slider-indicators-outside slider-nav-outside">
+                    <ul class="slider-container gap-3">
+
+                        <li>
+                            <div class="card">
+                                <img src="./assets/images/res1.jpeg" class="card-img-top" alt="restaurant">
+                                <div class="card-body">
+                                    <small class="text-warning ">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </small>
+                                    <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                                    <span class="card-text text-muted">
+                                        <small><i class="bi bi-geo-alt-fill"></i></small>
+                                        <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                                    </span>
+                                    <a href="#"
+                                        class=" d-flex justify-content-center btn btn-primary  mt-2   text-light bg-warning border-0">Voir
+                                        le réstaurant</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide-visible">
+                            <div class="card">
+                                <img src="./assets/images/res2.jpeg" class="card-img-top" alt="restaurant">
+                                <div class="card-body">
+                                    <small class="text-warning ">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </small>
+                                    <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                                    <span class="card-text text-muted">
+                                        <small><i class="bi bi-geo-alt-fill"></i></small>
+                                        <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                                    </span>
+                                    <a href="#"
+                                        class=" d-flex justify-content-center btn btn-primary  mt-2   text-light bg-warning border-0">Voir
+                                        le réstaurant</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide-visible">
+                            <div class="card">
+                                <img src="./assets/images/res3.jpeg" class="card-img-top" alt="restaurant">
+                                <div class="card-body">
+                                    <small class="text-warning ">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </small>
+                                    <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                                    <span class="card-text text-muted">
+                                        <small><i class="bi bi-geo-alt-fill"></i></small>
+                                        <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                                    </span>
+                                    <a href="#"
+                                        class=" d-flex justify-content-center btn btn-primary  mt-2   text-light bg-warning border-0">Voir
+                                        le réstaurant</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide-visible">
+                            <div class="card">
+                                <img src="./assets/images/res4.jpeg" class="card-img-top" alt="restaurant">
+                                <div class="card-body">
+                                    <small class="text-warning ">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </small>
+                                    <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                                    <span class="card-text text-muted">
+                                        <small><i class="bi bi-geo-alt-fill"></i></small>
+                                        <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                                    </span>
+                                    <a href="#"
+                                        class=" d-flex justify-content-center btn btn-primary  mt-2   text-light bg-warning border-0">Voir
+                                        le réstaurant</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="./assets/images/res4.jpeg" class="card-img-top" alt="restaurant">
+                                <div class="card-body">
+                                    <small class="text-warning ">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </small>
+                                    <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                                    <span class="card-text text-muted">
+                                        <small><i class="bi bi-geo-alt-fill"></i></small>
+                                        <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                                    </span>
+                                    <a href="#"
+                                        class=" d-flex justify-content-center btn btn-primary  mt-2   text-light bg-warning border-0">Voir
+                                        le réstaurant</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="./assets/images/res2.jpeg" class="card-img-top" alt="restaurant">
+                                <div class="card-body">
+                                    <small class="text-warning ">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </small>
+                                    <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                                    <span class="card-text text-muted">
+                                        <small><i class="bi bi-geo-alt-fill"></i></small>
+                                        <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                                    </span>
+                                    <a href="#"
+                                        class=" d-flex justify-content-center btn btn-primary  mt-2   text-light bg-warning border-0">Voir
+                                        le réstaurant</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="./assets/images/res1.jpeg" class="card-img-top" alt="restaurant">
+                                <div class="card-body">
+                                    <small class="text-warning ">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </small>
+                                    <h5 class="card-title fw-bold mt-2">Au Palais Du Jardin</h5>
+                                    <span class="card-text text-muted">
+                                        <small><i class="bi bi-geo-alt-fill"></i></small>
+                                        <small>Baie des Palmiers, Cité Founty P5, Agadir</small>
+                                    </span>
+                                    <a href="#"
+                                        class=" d-flex justify-content-center btn btn-primary  mt-2   text-light bg-warning border-0">Voir
+                                        le réstaurant</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <button type="button" class="slider-nav"></button>
+                    <button type="button" class="slider-nav slider-nav-next"></button>
+
+                    <ul class="slider-indicators">
+                        <li></li>
+                        <li></li>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
-              </div>
-            
+
+            </div>
+
 
         </div>
 
     </section>
+    <!-- <li class="nav-item" id="toggle">🔆</li>
+    <span id="theme_toggler">
+        Change theme
+    </span> -->
 
-
-    <section class="topRestaurants bg-light d-none d-md-block">
-        <div class="row justify-content-center my-5 g-0 needs-validation">
-            <div class="card col-4 border-0 m-5" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-
-            <div class="card col-4 border-0 m-5" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-light border-2 bg-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-
-            <div class="card col-4 border-0 m-5" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-
-
-    <section class="topRestaurants bg-warning d-none d-md-block">
-        <div class="row justify-content-center my-5 g-0 needs-validation">
-            <div class="card col-4 border-0 m-5" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-
-            <div class="card col-4 border-0 m-5" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-light border-2 bg-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-
-            <div class="card col-4 border-0 m-5" style="width: 20rem; height: 30rem;">
-                <img src="/assets/healthy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="pb-2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-
-                    </div>
-                    <h3 class="card-title">Let's Be Healing Food</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i>1 National Route, Tamraght, Agadir </p>
-                    <a href="#" class="btn btn-none text-warning border-2 border-warning rounded rounded-pill "
-                        style="width: 15rem;">Voir le réstaurant</a>
-                </div>
-            </div>
-
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-
-
-
-    <section class="bg-dark">
+    <section>
         <a href="#main-nav"> <i class="bi bi-arrow-up text-warning buttonUp"></i> </a>
     </section>
 
@@ -447,10 +427,56 @@
                 })
         })()
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
+
+
+
+
+<script>
+    let theme_toggler = document.querySelector('#theme_toggler');
+
+    theme_toggler.addEventListener('click', function () {
+        document.body.classList.toggle('dark_mode');
+        if (document.body.classList.contains('dark_mode')) {
+            localStorage.setItem('website_theme', 'dark_mode');
+            theme_toggler.innerHTML = '🔆';
+        } else {
+            localStorage.setItem('website_theme', 'default');
+            theme_toggler.innerHTML = '🌙';
+        }
+    });
+
+    function retrieve_theme() {
+        var theme = localStorage.getItem('website_theme');
+        if (theme != null) {
+            document.body.classList.remove('default', 'dark_mode');
+            document.body.classList.add(theme);
+            if (theme == 'dark_mode') {
+                theme_toggler.innerHTML = '🔆';
+            } else {
+                theme_toggler.innerHTML = '🌙';
+            }
+
+        }
+    }
+
+    retrieve_theme();
+
+    window.addEventListener("storage", function () {
+        retrieve_theme();
+    }, false);
+
+</script>
+<script>
+    // activate select2
+    $(document).ready(function () {
+        $('.countries').select2({
+            width: '25%'
+        });
+    });
+</script>
 
 </html>
