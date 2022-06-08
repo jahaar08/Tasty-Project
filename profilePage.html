@@ -1,0 +1,184 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
+
+    <link href="./styles/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        crossorigin="anonymous">
+    <style>
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" defer
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider-extensions.min.js"
+        crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <style>
+        .gradient-custom-2 {
+            /* fallback for old browsers */
+            background: #443b41;
+
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgb(189, 179, 186), rgba(166, 193, 238, 1));
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgb(26, 35, 31), rgb(184, 110, 125))
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="bg-light">
+        <div class="container-xxl d-flex justify-content-around">
+            <div class="mt-3">
+                <a href="#intro" class="navbar-brand">
+                    <span>
+                        <img src="/assets/svg/TTasty.svg" alt="" style="width: 80;">
+                    </span>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar links -->
+            <div class="navbar navbar-expand-md navbar-light">
+                <div id="main-nav" class="collapse navbar-collapse justify-content-end align-center">
+
+                    <ul class="navbar-nav gap-4">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link ">Accueil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#reviews" class="nav-link ">Articles</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <li class="">
+                    <a id="theme_toggler" href="#" class="btn " style="width: 100;font-size: 26px;">
+                        🔆</a>
+                </li>
+
+                <li class="nav-item ms-2 d-none d-md-inline ">
+                    <a href="index.html" class="btn text-danger " style="width: 100;"> Déconnecter</a>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <section class="h-100 gradient-custom-2">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-9 col-xl-7">
+                    <div class="card">
+                        <div class="rounded-top text-white d-flex flex-row"
+                            style="background-color: #85545bd9; height:200px;">
+                            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                                <img src="/assets/avatar6.png" alt="image" class="img-fluid img-thumbnail mt-4 mb-2"
+                                    style="width: 150px; z-index: 1">
+
+                            </div>
+                            <div class="ms-3" style="margin-top: 130px;">
+                                <h5 class="text-light fw-bold">Hajar Akarouch</h5>
+                                <p>Date de naissance</p>
+                            </div>
+                        </div>
+                        <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                            <div class="d-flex justify-content-end text-center py-1">
+                                <div>
+                                    <p class="mb-1 h5">19</p>
+                                    
+                                    <p class="small text-muted mb-0">Avis rédigés</p>
+                                </div>
+                                <div class="px-3">
+                                    <p class="mb-1 h5">76</p>
+                                    <p class="small text-muted mb-0">Réactions</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body  text-black">
+                            <div class="">
+                                <p class="lead fw-bold  text-center">Informations personnelles</p>
+                                <div class="p-4 text-center" style="background-color: #f8f9fa;">
+                                    <p class="font-italic mb-1 rounded border border-3 ">Nom et prénom: Hajar Akarouch
+                                    </p>
+                                    <p class="font-italic mb-1 rounded border border-3">Email: xxxxxxxx@gmail.com
+                                    </p>
+                                    <p class="font-italic mb-0 rounded border border-3">Date de naissance: xx-xx-xxxx</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <p class="lead fw-bold mb-0 mt-2">Avis rédigés</p>
+                                <p class="mb-0"><a href="#!" class="text-muted">Voir tout</a></p>
+                            </div>
+                            <div class="row g-2 justify-content-around">
+                                <div class="col-3 ">
+                                    <img src="/assets/images/res1.jpeg" alt="image 1" class="w-100 rounded-3">
+                                    <p class="text-center ">Avis 1</p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="/assets/images/res1.jpeg" alt="image 1" class="w-100 rounded-3">
+                                    <p class="text-center">Avis 2</p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="/assets/images/res1.jpeg" alt="image 1" class="w-100 rounded-3">
+                                    <p class="text-center">Avis 3</p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
