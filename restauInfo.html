@@ -1,36 +1,100 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tasty</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
-    
-        <link href="./styles/style.css" rel="stylesheet">
-    
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-            crossorigin="anonymous">
-        <style>
-    
-        </style>
-        <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" defer
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider-extensions.min.js"
-            crossorigin="anonymous" defer></script>
-        <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
-            crossorigin="anonymous">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
-            crossorigin="anonymous">
-        <!-- jquery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
+
+    <link href="./styles/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        crossorigin="anonymous">
+    <style>
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" defer
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider-extensions.min.js"
+        crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <style>
+        .lboard_wrap .lboard_item {
+            padding: 25px;
+        }
+
+        .lboard_wrap .lboard_mem {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #929daf;
+        }
+
+        .lboard_wrap .lboard_mem:first-child {
+            padding-top: 0;
+        }
+
+        .lboard_wrap .lboard_mem:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .lboard_wrap .lboard_mem .stars {
+            width: 30%;
+        }
+
+        .lboard_wrap .lboard_mem .name_bar {
+            margin: 0 20px;
+            width: calc(100% - 150px);
+        }
+
+        .lboard_wrap .lboard_mem .name_bar p {
+            font-size: 15px;
+            color: #929daf;
+        }
+
+        .lboard_wrap .lboard_mem .name_bar p span {
+            margin-right: 5px;
+        }
+
+
+        .lboard_wrap .lboard_mem .name_bar .bar_wrap {
+            width: 100%;
+            height: 5px;
+            background: #929daf;
+            margin-top: 5px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lboard_wrap .lboard_mem .name_bar .bar_wrap .inner_bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 10px;
+            background: #fba70b;
+            border-radius: 5px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    </style>
+</head>
+
 <body>
     <nav>
-        <div class="container-xxl d-flex justify-content-around">
+        <div class="container-xxl d-flex justify-content-around px-5">
             <div class="mt-3">
                 <a href="#intro" class="navbar-brand">
                     <span>
@@ -92,7 +156,7 @@
         </div>
 
     </nav>
-    <!-- modal itself -->  
+    <!-- modal itself -->
     <div class="modal fade " id="login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -119,7 +183,7 @@
     </div>
 
 
-    <!-- modal itself -->  
+    <!-- modal itself -->
     <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -158,6 +222,341 @@
 
     </div>
 
+    <div class="container px-4 px-lg-5 pt-5 my-5">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5 ">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/500x300/cfbfcf/fff" alt="..." />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="font-weight-light "><b>Le Nom De Restaurant</b></h1>
+                <p class="text-danger"><b><i class="bi bi-star-fill "></i> 4.5</b></p>
+                <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quidem
+                    ducimus, animi dicta
+                    placeat ad saepe quod et delectus totam. Earum unde eum iure libero sapiente nesciunt iste quae ab
+                </p>
+                <a class="btn btn-success text-light " href="#!">Visiter le site web</a>
+                <button class="btn btn-danger text-light " data-bs-toggle="modal"
+                    data-bs-target="#add-review-modal">Ajouter Avis</button>
+            </div>
+            <div class="modal fade" id="add-review-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-title">Ajouter un avis </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, nihil quaerat?
+                                Assumenda exercitationem, magnam voluptatum repudiandae iure quisquam. Illo, molestias!</p>
+                            <label for="psps" class="form-label">shi haja</label>
+                            <input type="text" class="form-control" id="psps">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger">Submit</button>
+                        </div>
+                    </div>
     
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Call to Action-->
+        <hr style="height: 2; size: 3; color: black; ">
+        <section class=" d-flex justify-content-center">
+            <div>
+                <h3 class="d-flex justify-content-center">Les Photos de restaurant</h3>
+                <br>
+                <img src="https://dummyimage.com/300x200/000/fff" alt="">
+                <img src="https://dummyimage.com/300x200/000/fff" alt="">
+                <img src="https://dummyimage.com/300x200/000/fff" alt="">
+                <img src="https://dummyimage.com/300x200/000/fff" alt="">
+            </div>
+        </section>
+
+        <section class="row d-flex justify-content-center">
+            <div class="wrapper col-8">
+                <div class="lboard_wrap">
+                    <div class="lboard_item" style="display: block;">
+                        <div>
+                            <h3 class="my-4 d-flex justify-content-center m-0"><i class="bi bi-clipboard-pulse"></i>
+                                Statistiques d'évaluation </h3>
+
+                        </div>
+                        <div class="lboard_mem my-3 ">
+
+                            <div class="stars">
+                                <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                            </div>
+                            <div class="name_bar">
+                                <p>Excellent</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                1195 votes
+                            </div>
+                        </div>
+
+                        <div class="lboard_mem my-3">
+                            <div class="stars">
+                                <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                            </div>
+                            <div class="name_bar">
+                                <p>Très Bien</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                1195 votes
+                            </div>
+                        </div>
+                        <div class="lboard_mem my-3">
+                            <div class="stars">
+                                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                            </div>
+                            <div class="name_bar">
+                                <p>Bien</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                1195 votes
+                            </div>
+                        </div>
+                        <div class="lboard_mem my-3">
+                            <div class="stars">
+                                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                            </div>
+                            <div class="name_bar">
+                                <p>Moyen</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 50.0%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                1195 votes
+                            </div>
+                        </div>
+                        <div class="lboard_mem my-3">
+                            <div class="stars">
+                                <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                            </div>
+                            <div class="name_bar">
+                                <p>Pauvre</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                1195 votes
+                            </div>
+                        </div>
+                        <div class="lboard_mem my-3">
+                            <div class="stars">
+                                <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                            </div>
+                            <div class="name_bar">
+                                <p>Extrêmement Pauvre</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                1195 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr style="height: 2; size: 3; color: black; ">
+        <section id="reviews" class="bg-light">
+            <div class="container-lg">
+                <div class="text-center">
+                    <h2><i class="bi bi-stars"></i>Les Avis De Ce Restaurant</h2>
+                    <p class="lead">What costumers have said about this restaurant ...</p>
+                </div>
+                <div class="row justify-content-center my-5">
+                    <div class="col-lg-8">
+                        <div class="list-group">
+                            <div class="list-group-item py-3">
+                                <div class="pb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+
+                                </div>
+                                <h5 class="mb-1">A must try</h5>
+                                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+                                    debitis quia? Nobis cumque illo, atque doloribus adipisci asperiores voluptatum
+                                    laudantium neque deserunt officiis expedita vel nulla ipsam accusantium recusandae
+                                    animi.</p>
+                                <small>Review by mo7mmad</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="list-group">
+                            <div class="list-group-item py-3">
+                                <div class="pb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+
+                                </div>
+                                <h5 class="mb-1">A must visit</h5>
+                                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+                                    debitis quia? Nobis cumque illo, atque doloribus adipisci asperiores voluptatum
+                                    laudantium neque deserunt officiis expedita vel nulla ipsam accusantium recusandae
+                                    animi.</p>
+                                <small>Review by amine</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="list-group">
+                            <div class="list-group-item py-3">
+                                <div class="pb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+
+                                </div>
+                                <h5 class="mb-1">Hadshi wa3er</h5>
+                                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+                                    debitis quia? Nobis cumque illo, atque doloribus adipisci asperiores voluptatum
+                                    laudantium neque deserunt officiis expedita vel nulla ipsam accusantium recusandae
+                                    animi.</p>
+                                <small>Review by hajar</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="list-group">
+                            <div class="list-group-item py-3">
+                                <div class="pb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+
+                                </div>
+                                <h5 class="mb-1">La 3ala9a dakshi</h5>
+
+                                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+                                    debitis quia? Nobis cumque illo, atque doloribus adipisci asperiores voluptatum
+                                    laudantium neque deserunt officiis expedita vel nulla ipsam accusantium recusandae
+                                    animi.</p>
+                                <small>Review by shi wahd </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="list-group">
+                            <div class="list-group-item py-3">
+                                <div class="pb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+
+                                </div>
+                                <h5 class="mb-1">Niiiiice</h5>
+                                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+                                    debitis quia? Nobis cumque illo, atque doloribus adipisci asperiores voluptatum
+                                    laudantium neque deserunt officiis expedita vel nulla ipsam accusantium recusandae
+                                    animi.</p>
+                                <small>Review by shi wahd tani</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+
+
 </body>
+
 </html>
